@@ -169,35 +169,86 @@ function App() {
           </div>
           <div className="skills-categories">
             <div className="skill-category">
-              <h3 className="skills-category-title">Cloud Technologies</h3>
+              <h3 className="skills-category-title">Cloud Platforms</h3>
               <div className="skills-grid">
                 <div className="skill-item">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS" className="skill-icon" />
                   <div className="skill-name">AWS</div>
                 </div>
                 <div className="skill-item">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" className="skill-icon" />
-                  <div className="skill-name">Terraform</div>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP" className="skill-icon" />
+                  <div className="skill-name">GCP</div>
                 </div>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3 className="skills-category-title">Containerization & Orchestration</h3>
+              <div className="skills-grid">
                 <div className="skill-item">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="Kubernetes" className="skill-icon" />
                   <div className="skill-name">Kubernetes</div>
                 </div>
                 <div className="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" className="skill-icon" />
+                  <div className="skill-name">Docker</div>
+                </div>
+                <div className="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rabbitmq/rabbitmq-original.svg" alt="RabbitMQ" className="skill-icon" />
+                  <div className="skill-name">RabbitMQ</div>
+                </div>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3 className="skills-category-title">MLOps</h3>
+              <div className="skills-grid">
+                <div className="skill-item">
+                  <img src="https://www.mlflow.org/docs/latest/_static/MLflow-logo-final-black.png" alt="MLFlow" className="skill-icon" />
+                  <div className="skill-name">MLFlow</div>
+                </div>
+                <div className="skill-item">
+                  <img src="https://raw.githubusercontent.com/kserve/website/master/static/images/KServe-logo-black.png" alt="Kserve" className="skill-icon" />
+                  <div className="skill-name">Kserve</div>
+                </div>
+                <div className="skill-item">
+                  <img src="https://optuna.org/assets/img/logo/optuna-logo-dark.png" alt="Optuna" className="skill-icon" />
+                  <div className="skill-name">Optuna</div>
+                </div>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3 className="skills-category-title">Infrastructure as Code</h3>
+              <div className="skills-grid">
+                <div className="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg" alt="Terraform" className="skill-icon" />
+                  <div className="skill-name">Terraform</div>
+                </div>
+                <div className="skill-item">
                   <img src="https://www.vectorlogo.zone/logos/helmsh/helmsh-icon.svg" alt="Helm" className="skill-icon" />
                   <div className="skill-name">Helm</div>
                 </div>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3 className="skills-category-title">CI/CD & Automation</h3>
+              <div className="skills-grid">
                 <div className="skill-item">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" className="skill-icon" />
-                  <div className="skill-name">Git</div>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Actions" className="skill-icon" />
+                  <div className="skill-name">GitHub Actions</div>
+                </div>
+                <div className="skill-item">
+                  <img src="https://www.vectorlogo.zone/logos/fluxcdio/fluxcdio-icon.svg" alt="FluxCD" className="skill-icon" />
+                  <div className="skill-name">FluxCD</div>
                 </div>
                 <div className="skill-item">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" className="skill-icon" />
                   <div className="skill-name">Jenkins</div>
                 </div>
+                <div className="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" alt="Bash" className="skill-icon" />
+                  <div className="skill-name">Bash</div>
+                </div>
               </div>
             </div>
-            
             <div className="skill-category">
               <h3 className="skills-category-title">Programming Languages</h3>
               <div className="skills-grid">
@@ -205,31 +256,31 @@ function App() {
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" className="skill-icon" />
                   <div className="skill-name">Python</div>
                 </div>
-                <div className="skill-item">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" className="skill-icon" />
-                  <div className="skill-name">C++</div>
-                </div>
-                <div className="skill-item">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="Golang" className="skill-icon" />
-                  <div className="skill-name">Golang</div>
-                </div>
               </div>
             </div>
-            
             <div className="skill-category">
-              <h3 className="skills-category-title">Web Technologies</h3>
+              <h3 className="skills-category-title">Operating Systems & Networking</h3>
               <div className="skills-grid">
+                <div className="skill-item">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" className="skill-icon" />
+                  <div className="skill-name">Linux</div>
+                </div>
+                <div className="skill-item">
+                  <img src="https://istio.io/latest/img/istio-logo-social.png" alt="Istio" className="skill-icon" />
+                  <div className="skill-name">Istio</div>
+                </div>
                 <div className="skill-item">
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nginx/nginx-original.svg" alt="Nginx" className="skill-icon" />
                   <div className="skill-name">Nginx</div>
                 </div>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3 className="skills-category-title">Databases</h3>
+              <div className="skills-grid">
                 <div className="skill-item">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" className="skill-icon" />
-                  <div className="skill-name">HTML</div>
-                </div>
-                <div className="skill-item">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" className="skill-icon" />
-                  <div className="skill-name">CSS</div>
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="Relational Databases" className="skill-icon" />
+                  <div className="skill-name">Relational Databases</div>
                 </div>
               </div>
             </div>
@@ -407,14 +458,6 @@ function App() {
                     </svg>
                   </div>
                   <span>n.dinesh4320@gmail.com</span>
-                </a>
-                <a href="tel:+916379327383" className="contact-item">
-                  <div className="contact-icon">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M22 16.92V19.92C22.0011 20.1985 21.9441 20.4742 21.8325 20.7294C21.7209 20.9845 21.5573 21.2136 21.3521 21.4019C21.1468 21.5901 20.9046 21.7335 20.6407 21.8227C20.3769 21.9119 20.0974 21.9451 19.82 21.92C16.7428 21.5856 13.787 20.5342 11.19 18.85C8.77382 17.3147 6.72533 15.2662 5.18999 12.85C3.49997 10.2412 2.44824 7.27099 2.11999 4.18C2.095 3.90347 2.12787 3.62476 2.21649 3.36162C2.30512 3.09849 2.44756 2.85669 2.63476 2.65162C2.82196 2.44655 3.04981 2.28271 3.30379 2.17052C3.55778 2.05833 3.83233 2.00026 4.10999 2H7.10999C7.59344 1.99522 8.06476 2.16708 8.43517 2.48353C8.80558 2.79999 9.04692 3.23945 9.10999 3.72C9.22832 4.68007 9.47328 5.62273 9.82999 6.53C9.9446 6.88792 9.94923 7.27691 9.84358 7.63808C9.73793 7.99926 9.52747 8.3174 9.23999 8.55L7.95999 9.83C9.40367 12.3711 11.6289 14.5963 14.17 16.04L15.45 14.76C15.6823 14.4725 16.0008 14.2621 16.3619 14.1564C16.7231 14.0507 17.1121 14.0554 17.47 14.17C18.3773 14.5267 19.3199 14.7717 20.28 14.89C20.7658 14.9549 21.2094 15.2011 21.5265 15.5775C21.8437 15.9539 22.0122 16.4297 22 16.92Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                  <span>+91 6379327383</span>
                 </a>
                 <a href="https://linkedin.com/in/dinesh-kumar-346583241" target="_blank" rel="noopener noreferrer" className="contact-item">
                   <div className="contact-icon">
