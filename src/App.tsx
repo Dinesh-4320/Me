@@ -213,16 +213,12 @@ function App() {
               <h3 className="skills-category-title">MLOps</h3>
               <div className="skills-grid">
                 <div className="skill-item">
-                  <img src="https://www.mlflow.org/docs/latest/_static/MLflow-logo-final-black.png" alt="MLFlow" className="skill-icon" />
+                  <img src="https://cdn.brandfetch.io/idS8GMP5c8/theme/dark/logo.svg" alt="MLFlow" className="skill-icon" />
                   <div className="skill-name">MLFlow</div>
                 </div>
                 <div className="skill-item">
-                  <img src="https://raw.githubusercontent.com/kserve/website/master/static/images/KServe-logo-black.png" alt="Kserve" className="skill-icon" />
+                  <img src="https://github.com/kserve/artwork/blob/main/color/k-serve-color.svg" alt="Kserve" className="skill-icon" />
                   <div className="skill-name">Kserve</div>
-                </div>
-                <div className="skill-item">
-                  <img src="https://optuna.org/assets/img/logo/optuna-logo-dark.png" alt="Optuna" className="skill-icon" />
-                  <div className="skill-name">Optuna</div>
                 </div>
               </div>
             </div>
