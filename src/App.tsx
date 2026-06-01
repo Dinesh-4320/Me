@@ -149,10 +149,21 @@ function App() {
                   </div>
                 </div>
                 <ul className="achievements-list">
-                  <li>Built a microservice-based data engineering application - Dataflow</li>
-                  <li>Reduced 90% of manual application deployment using automation scripts</li>
-                  <li>Enabled scalable deployments across multiple environments and cloud providers</li>
-                  <li>Technologies: Kubernetes, Helm, Terraform, Bash, Python, etc.</li>
+                  <li><b>Product - Musecool</b></li>
+                  <li>Migrated a monolithic 3-tier application to 4 containerized microservices, improving system scalability, fault isolation.</li>
+                  <li>Enforced auto-scaling for GPU workloads leveraging Kserve and Knative with scale to 0 strategy, reducing infrastructure costs by ~80% while maintaining on-demand processing performance.</li>
+                  <li>Integrated MLflow for experiment tracking and model versioning, enabling reproducible ML workflows and streamlined promotion of models from experimentation to production.</li>
+                  <li>Made use of Redis and RabbitMQ to buffer and streamline the delivery of music recordings to the inference services preventing overloading.</li>
+                  <li>Introduced the use of Optuna for optimizing the model hyperparameters for the continuously changing input data.</li>
+                  <li>Structured CI/CD pipelines across staging and production, eliminating 90% of manual deployments and improving release reliability.</li>
+                  <br />
+                  <li><b>Product - Dataflow</b></li>
+                  <li>Architected a production-grade microservices platform deployed across multiple Kubernetes clusters (dev, staging, prod), supporting 7+ deployments with high availability and operational consistency.</li>
+                  <li>Built and standardized CI/CD pipelines for containerized workloads, cutting manual deployment effort by ~90% and enabling fast, repeatable releases across AWS and GCP.</li>
+                  <li>Reduced Kubernetes pod startup latency by 75% by implementing container image snapshotting and warm-up instances, significantly improving scale-out responsiveness during traffic spikes.</li>
+                  <li>Replaced NFS-based Python environment mounts with a SquashFS-based distribution system using Kubernetes mount propagation, decreasing pod initialization time by 60% and eliminating I/O contention under load.</li>
+                  <li>Automated infrastructure provisioning using Terraform and Helm, enforcing Infrastructure as Code across environments and reliably supporting 100+ concurrent users.</li>
+                  <li>Engineered a periodically scheduled billing pipeline aggregating data from 6 platform features, ensuring accurate and reliable periodic billing without manual intervention.</li>
                 </ul>
               </div>
             </div>
@@ -389,6 +400,25 @@ function App() {
           <div className="certifications-content">
             <div className="certifications-category">
               <h3 className="category-title">Certifications</h3>
+              <div className="certification-item" onClick={() => window.open('https://www.linkedin.com/posts/dinesh-kumar-n-346583241_kubernetes-devops-microservices-ugcPost-7442256656954019841-RCtz/?utm_source=share&utm_medium=member_desktop&rcm=ACoAADwQKiYBJz1ERA485HU9aVpV_mMdm4gYKPs', '_blank')}>
+                <div className="cert-header">
+                  <div className="cert-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2L13.09 8.26L19 7.27L14.18 12.18L21 17L13.09 15.74L12 22L10.91 15.74L3 17L8.82 12.18L2 7.27L7.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" fill="var(--accent-primary)"/>
+                    </svg>
+                  </div>
+                  <div className="cert-details">
+                    <h4 className="cert-title">Certified Kubernetes Administrator</h4>
+                    <p className="cert-issuer">The Linux Foundation</p>
+                  </div>
+                </div>
+                <div className="cert-description">
+                  <p>Demonstrated expertise in deploying, managing, and troubleshooting Kubernetes clusters, covering core concepts, networking, storage, and security.</p>
+                </div>
+                <div className="cert-link">
+                  <span>View Certificate →</span>
+                </div>
+              </div>
               <div className="certification-item" onClick={() => window.open('https://www.linkedin.com/posts/dinesh-kumar-346583241_certificate-activity-7097897350035111936-nQFe?utm_source=share&utm_medium=member_desktop', '_blank')}>
                 <div className="cert-header">
                   <div className="cert-icon">
