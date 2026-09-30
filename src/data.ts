@@ -9,10 +9,10 @@ export const profile = {
 }
 
 export const stats = [
-  { value: '2+', label: 'Years experience' },
-  { value: '~90%', label: 'Manual deployments removed' },
-  { value: '~80%', label: 'GPU infra cost reduced' },
-  { value: '75%', label: 'Faster pod startup' },
+  { icon: 'Briefcase', value: '2+', label: 'Years experience' },
+  { icon: 'Workflow', value: '~90%', label: 'Manual deployments removed' },
+  { icon: 'Gauge', value: '~80%', label: 'GPU infra cost reduced' },
+  { icon: 'Rocket', value: '75%', label: 'Faster pod startup' },
 ]
 
 export const experience = {
@@ -48,6 +48,7 @@ export const experience = {
 }
 
 export const skills = [
+  { group: 'AI & Agentic Tooling', items: ['LangChain', 'LangGraph', 'Google ADK', 'Gemini', 'Claude Code', 'Antigravity'] },
   { group: 'Cloud Platforms', items: ['AWS', 'GCP', 'European Sovereign Cloud providers'] },
   { group: 'Containers & Orchestration', items: ['Kubernetes', 'Docker', 'RabbitMQ', 'Redis'] },
   { group: 'MLOps', items: ['MLflow', 'KServe', 'Optuna'] },
