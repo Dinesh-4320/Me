@@ -97,18 +97,91 @@ h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; margin: 0 0 1rem; 
 .item-icon .ti { font-size: 22px; }
 .item-icon svg { width: 100%; height: 100%; }
 
-.hero { background: radial-gradient(60% 80% at 85% 0%, color-mix(in srgb, var(--accent-3) 22%, transparent), transparent), radial-gradient(50% 70% at 10% 10%, color-mix(in srgb, var(--accent) 20%, transparent), transparent); }
-h1, .stats dt, .brand { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.section-title { background: none; }
-.btn.primary { background: var(--grad); box-shadow: 0 8px 24px -8px color-mix(in srgb, var(--accent-2) 70%, transparent); }
-.photo { border: 0; padding: 3px; background: var(--grad); box-shadow: 0 20px 50px -20px color-mix(in srgb, var(--accent-2) 60%, transparent); }
-.navbar { border-image: var(--grad) 1; border-bottom-width: 1px; border-bottom-style: solid; }
-.title-icon, .g-icon, .stat-icon, .item-icon { background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 22%, transparent), color-mix(in srgb, var(--accent-3) 22%, transparent)); color: var(--text); }
-.card, .stats div { background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 7%, var(--surface)), var(--surface) 55%, color-mix(in srgb, var(--accent-3) 6%, var(--surface))); }
-.card:hover { border-color: color-mix(in srgb, var(--accent-2) 60%, var(--border)); box-shadow: 0 12px 30px -16px color-mix(in srgb, var(--accent-2) 60%, transparent); }
-.product h4, .accent { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.card li::marker { color: var(--accent-2); }
-.tags > span { background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--accent-3) 10%, transparent)); }
-.badge { border-color: var(--accent-2); color: var(--accent-2); }
-.footer { border-top: 0; position: relative; }
-.footer::before { content: ''; position: absolute; inset: 0 0 auto; height: 2px; background: var(--grad); }
+.product h4 a { border-bottom: 1px dashed currentColor; }
+.product h4 a:hover, .product h4 a:focus-visible { color: var(--text); }
+
+.open-badge { display: inline-flex; align-items: center; gap: .6rem; margin: 0 0 1.25rem; padding: .35rem .9rem; border-radius: 999px; font-size: .85rem; font-weight: 600; color: #22c55e; background: color-mix(in srgb, #22c55e 12%, transparent); border: 1px solid color-mix(in srgb, #22c55e 40%, transparent); }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(34,197,94,.6); } 70% { box-shadow: 0 0 0 8px rgba(34,197,94,0); } 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); } }
+@media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+@media (prefers-color-scheme: light) { .open-badge { color: #15803d; } }
+
+
+:root { --grad: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+.brand, .navbar nav a, .eyebrow, .kicker, .tags > span, .term, .badge, .footer, .stats dt, .open-badge { font-family: var(--mono); }
+.brand { color: var(--accent); }
+.brand::before { content: '>_ '; }
+.navbar nav a:hover, .navbar nav a:focus-visible { color: var(--accent); }
+.hero { background: radial-gradient(55% 80% at 85% 0%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent), radial-gradient(40% 60% at 5% 20%, color-mix(in srgb, var(--accent) 12%, transparent), transparent); }
+h1 { background: linear-gradient(90deg, var(--text), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.eyebrow { color: var(--accent); }
+.btn.primary { background: var(--grad); color: #04101f; box-shadow: 0 8px 24px -10px color-mix(in srgb, var(--accent) 80%, transparent); }
+.photo { border: 1px solid var(--accent); box-shadow: 0 0 0 6px color-mix(in srgb, var(--accent) 10%, transparent), 0 24px 50px -24px color-mix(in srgb, var(--accent) 50%, transparent); }
+.open-badge { color: var(--ok); background: color-mix(in srgb, var(--ok) 10%, transparent); border-color: color-mix(in srgb, var(--ok) 45%, transparent); }
+.dot { background: var(--ok); }
+.kicker { font-size: .85rem; color: var(--muted); margin: 0 0 .35rem; }
+.kicker span { color: var(--ok); }
+.section-title { margin-bottom: 1.5rem; }
+.title-icon, .g-icon, .stat-icon, .item-icon { background: color-mix(in srgb, var(--accent) 12%, transparent); border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); color: var(--accent); }
+.card, .stats div { background: var(--surface); }
+.card:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--border)); box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 25%, transparent), 0 14px 34px -18px color-mix(in srgb, var(--accent) 45%, transparent); }
+.card li::marker { color: var(--accent); }
+.product h4, .accent { background: none; color: var(--accent); -webkit-text-fill-color: currentColor; font-family: var(--mono); font-size: .95rem; }
+.stats dt { background: none; color: var(--accent); -webkit-text-fill-color: currentColor; }
+.tags > span { background: color-mix(in srgb, var(--accent) 7%, transparent); border-radius: 8px; font-size: .78rem; }
+.badge { border-color: var(--accent); color: var(--accent); }
+.term { display: flex; align-items: center; gap: .4rem; margin: -1.5rem -1.5rem 1.25rem; padding: .55rem 1rem; font-size: .78rem; color: var(--muted); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--accent) 5%, transparent); border-radius: 16px 16px 0 0; }
+.term i { width: 9px; height: 9px; border-radius: 50%; background: #ff5f57; }
+.term i:nth-child(2) { background: #febc2e; }
+.term i:nth-child(3) { background: #28c840; margin-right: .5rem; }
+.footer { border: 0; border-top: 1px solid var(--border); }
+.footer-in { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+.footer .dot { display: inline-block; margin-right: .4rem; }
+
+.cluster { margin: 2.5rem 0 0; padding: 1rem; border: 1px solid var(--border); border-radius: 16px; background: color-mix(in srgb, var(--surface) 80%, transparent); }
+.cluster-scroll { overflow-x: auto; }
+.cluster-scroll > svg { display: block; width: 100%; min-width: 900px; height: auto; font-family: var(--mono); font-size: 13px; }
+.cluster text { fill: var(--text); text-anchor: middle; }
+.cluster text.left { text-anchor: start; }
+.cluster .cap { fill: var(--muted); font-size: 10.5px; }
+.cluster .node rect { fill: var(--surface); stroke: var(--accent-2); stroke-width: 1.5; }
+.cluster .group { fill: none; stroke: var(--muted); stroke-width: 1.2; stroke-dasharray: 5 5; opacity: .6; }
+.cluster .group.trust { stroke: var(--ok); opacity: .7; }
+.cluster .trust-cap { fill: var(--ok); text-anchor: start; }
+.cluster .pod rect { fill: color-mix(in srgb, var(--accent) 10%, var(--surface)); stroke: var(--accent); stroke-width: 1.5; }
+.cluster .ic { color: var(--accent); }
+.cluster .ic.ok { color: var(--ok); }
+.cluster .links path { fill: none; stroke: var(--accent); stroke-width: 2; stroke-dasharray: 4 6; }
+.cluster .links .soft { stroke: var(--ok); }
+.cluster .badge-lock circle { fill: var(--surface); stroke: var(--ok); stroke-width: 1.2; }
+.cluster .tube { fill: color-mix(in srgb, var(--accent-2) 12%, var(--surface)); stroke: var(--accent-2); stroke-width: 1.5; }
+.cluster .job { fill: var(--accent); }
+.cluster .gpu-card rect:first-child { fill: color-mix(in srgb, var(--ok) 8%, var(--surface)); stroke: var(--ok); stroke-width: 1.5; }
+.cluster .util { fill: var(--ok); transform-box: fill-box; transform-origin: left; animation: util 3s ease-in-out infinite; }
+.cluster .pkt { fill: var(--accent); filter: drop-shadow(0 0 6px var(--accent)); }
+.flow { animation: flow 1s linear infinite; }
+.scale { animation: scale 6s ease-in-out infinite; }
+.scale-b { animation-delay: .6s; }
+.idle { animation: gpu 6s ease-in-out infinite; }
+.belt { animation: belt 3s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -20; } }
+@keyframes scale { 0%, 15% { opacity: .15; } 35%, 75% { opacity: 1; } 95%, 100% { opacity: .15; } }
+@keyframes gpu { 0%, 25% { opacity: .3; } 45%, 70% { opacity: 1; } 90%, 100% { opacity: .3; } }
+@keyframes belt { from { transform: translateX(0); } to { transform: translateX(26px); } }
+@keyframes util { 0%, 100% { transform: scaleX(.3); } 50% { transform: scaleX(1); } }
+@media (prefers-reduced-motion: reduce) { .flow, .scale, .idle, .belt, .util, .floater, .bg-graph circle, .bg-rack circle { animation: none !important; } .pkt { display: none; } }
+
+.bg-viz { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; color: var(--accent); }
+.floater { position: absolute; opacity: .07; animation: float 24s ease-in-out infinite; will-change: transform; }
+.floater svg { display: block; }
+@keyframes float { 0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); } 50% { transform: translate3d(14px, -26px, 0) rotate(6deg); } }
+.bg-graph { position: absolute; right: -40px; top: 46%; width: 340px; opacity: .14; stroke: var(--accent); }
+.bg-graph line { stroke-width: 1; opacity: .6; }
+.bg-graph circle { fill: var(--accent); animation: node 4s ease-in-out infinite; }
+.bg-rack { position: absolute; left: -40px; bottom: 6%; width: 110px; opacity: .14; fill: none; stroke: var(--accent); stroke-width: 1.5; }
+.bg-rack circle { fill: var(--ok); stroke: none; animation: led 2.4s steps(2, jump-none) infinite; }
+@keyframes node { 0%, 100% { opacity: .3; } 50% { opacity: 1; } }
+@keyframes led { 0%, 100% { opacity: .2; } 50% { opacity: 1; } }
+@media (max-width: 860px) { .floater:nth-child(n+6), .bg-graph { display: none; } .bg-rack { width: 70px; } }
+.cluster .node.small text:not(.cap) { font-size: 12px; }
+.cluster .pulse { fill: none; stroke: var(--ok); stroke-width: 1.5; stroke-dasharray: 3 5; }

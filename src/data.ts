@@ -8,6 +8,8 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/dinesh-kumar-n-346583241/',
 }
 
+export const openTo = ['Full-time', 'Contract', 'Freelance']
+
 export const stats = [
   { icon: 'Briefcase', value: '2+', label: 'Years experience' },
   { icon: 'Workflow', value: '~90%', label: 'Manual deployments removed' },
@@ -22,6 +24,7 @@ export const experience = {
   products: [
     {
       name: 'Musecool',
+      url: 'https://themuse.musecool.com',
       points: [
         'Migrated a monolithic 3-tier application to 4 containerized microservices, improving scalability and fault isolation.',
         'Enforced auto-scaling for GPU workloads with KServe and Knative using a scale-to-zero strategy, reducing infrastructure costs by ~80% while keeping on-demand performance.',
@@ -34,6 +37,7 @@ export const experience = {
     },
     {
       name: 'Dataflow',
+      url: 'https://app.dataflow.zone',
       points: [
         'Architected a production-grade microservices platform across multiple Kubernetes clusters (dev, staging, prod), supporting 9+ deployments with high availability and operational consistency.',
         'Built and standardized CI/CD pipelines for containerized workloads, cutting manual deployment effort by ~90% and enabling fast, repeatable releases across AWS and GCP.',
@@ -62,6 +66,7 @@ export const skills = [
 
 export const projects = [
   {
+    file: 'crack-detection.yaml',
     title: 'Crack Detection in Tunnels',
     subtitle: 'MLOps pipeline for infrared image analysis',
     points: [
@@ -74,6 +79,7 @@ export const projects = [
     tags: ['KServe', 'Knative', 'MLflow', 'Kubernetes', 'CI/CD'],
   },
   {
+    file: 'zero-trust.yaml',
     title: 'Zero Trust Architecture',
     subtitle: 'For microservice-based environments',
     points: [

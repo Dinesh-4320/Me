@@ -4,13 +4,23 @@ import amritaLogo from './assets/amrita.png'
 import dboLogo from './assets/DBO.png'
 import {
   profile, stats, experience, skills, projects, certifications,
-  achievements, publication, education,
+  achievements, publication, education, openTo,
 } from './data'
+import BackgroundViz from './BackgroundViz'
+import ClusterViz from './ClusterViz'
 import { TechIcon } from './icons'
 import { groupIcons, sectionIcons, ui } from './iconMaps'
 
 const statIcons: Record<string, React.ReactNode> = {
   Briefcase: ui.Briefcase, Workflow: ui.Workflow, Gauge: ui.Gauge, Rocket: ui.Rocket,
+}
+
+const commands: Record<string, string> = {
+  experience: 'kubectl get deployments',
+  skills: 'helm list --all',
+  projects: 'kubectl get pods -n projects',
+  credentials: 'cat credentials.yaml',
+  contact: 'curl -X POST /hire',
 }
 
 const nav = ['experience', 'skills', 'projects', 'credentials', 'contact']
@@ -19,6 +29,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
   return (
     <section id={id} className="section">
       <div className="container">
+        <p className="kicker"><span>$</span> {commands[id]}</p>
         <h2 className="section-title"><span className="title-icon">{sectionIcons[id]}</span>{title}</h2>
         {children}
       </div>
@@ -29,6 +40,7 @@ function Section({ id, title, children }: { id: string; title: string; children:
 export default function App() {
   return (
     <>
+      <BackgroundViz />
       <header className="navbar">
         <div className="container nav-inner">
           <a href="#top" className="brand">DK</a>
@@ -42,6 +54,7 @@ export default function App() {
         <section className="hero">
           <div className="container hero-inner">
             <div className="hero-text">
+              <p className="open-badge"><span className="dot" aria-hidden="true" />Running · Open to work · {openTo.join(' · ')}</p>
               <p className="eyebrow">{profile.role}</p>
               <h1>{profile.name}</h1>
               <p className="lead">{profile.summary}</p>
@@ -53,6 +66,7 @@ export default function App() {
             <img className="photo" src={profileImage} alt={profile.name} width={320} height={427} fetchPriority="high" />
           </div>
           <div className="container">
+            <ClusterViz />
             <dl className="stats">
               {stats.map((s) => (
                 <div key={s.label}>
@@ -67,6 +81,7 @@ export default function App() {
 
         <Section id="experience" title="Experience">
           <article className="card">
+            <div className="term"><i /><i /><i /><span>deployment/digital-back-office</span></div>
             <header className="job-head">
               <img src={dboLogo} alt="" width={81} height={35} loading="lazy" />
               <div>
@@ -76,7 +91,9 @@ export default function App() {
             </header>
             {experience.products.map((p) => (
               <div key={p.name} className="product">
-                <h4>Product · {p.name}</h4>
+                <h4>
+                  Product · <a href={p.url} target="_blank" rel="noopener noreferrer">{p.name}<span aria-hidden="true"> ↗</span></a>
+                </h4>
                 <ul>{p.points.map((pt) => <li key={pt}>{pt}</li>)}</ul>
               </div>
             ))}
@@ -107,6 +124,7 @@ export default function App() {
           <div className="grid two">
             {projects.map((p) => (
               <article key={p.title} className="card">
+                <div className="term"><i /><i /><i /><span>{p.file}</span></div>
                 <h3>{p.title}</h3>
                 <p className="muted">{p.subtitle}</p>
                 <ul>{p.points.map((pt) => <li key={pt}>{pt}</li>)}</ul>
@@ -151,6 +169,7 @@ export default function App() {
         </Section>
 
         <Section id="contact" title="Get in touch">
+          <p className="lead">Open to full-time roles, contract engagements and freelance projects. Reach out and let's talk.</p>
           <div className="contact">
             <a className="btn primary" href={`mailto:${profile.email}`}>{ui.Mail}{profile.email}</a>
             <a className="btn" href={profile.linkedin} target="_blank" rel="noopener noreferrer">{ui.Linkedin}LinkedIn</a>
@@ -160,7 +179,10 @@ export default function App() {
       </main>
 
       <footer className="footer">
-        <div className="container">© {new Date().getFullYear()} {profile.name}</div>
+        <div className="container footer-in">
+          <span><span className="dot" aria-hidden="true" /> All systems operational</span>
+          <span>© {new Date().getFullYear()} {profile.name}</span>
+        </div>
       </footer>
     </>
   )
