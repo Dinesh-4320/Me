@@ -5,7 +5,7 @@ export const profile = {
     'Around 2+ years of experience operating microservice-based and ML-driven applications. I orchestrate scalable workloads on Kubernetes and automate the model lifecycle with IaC and CI/CD, with a track record in deployment strategy, cloud migration and cost optimization.',
   email: 'n.dinesh4320@gmail.com',
   github: 'https://github.com/Dinesh-4320',
-  linkedin: 'https://linkedin.com/in/dinesh-kumar-346583241',
+  linkedin: 'https://www.linkedin.com/in/dinesh-kumar-n-346583241/',
 }
 
 export const stats = [
@@ -85,10 +85,10 @@ export const projects = [
   },
 ]
 
-export const certifications: { name: string; issuer: string; period: string; url: string; note?: string }[] = [
-  { name: 'Certified Kubernetes Administrator', issuer: 'CNCF & Linux Foundation', period: 'Mar 2026 – Mar 2028',
+export const certifications: { icon: string; name: string; issuer: string; period: string; url: string; note?: string }[] = [
+  { icon: 'Kubernetes', name: 'Certified Kubernetes Administrator', issuer: 'CNCF & Linux Foundation', period: 'Mar 2026 – Mar 2028',
     url: 'https://www.linkedin.com/in/dinesh-kumar-n-346583241/overlay/Certifications/550127110/treasury?profileId=ACoAADwQKiYBJz1ERA485HU9aVpV_mMdm4gYKPs' },
-  { name: 'AWS Cloud Practitioner', issuer: 'Amazon Web Services', period: 'Aug 2023 – Feb 2029', note: 'Recertified',
+  { icon: 'AWS', name: 'AWS Cloud Practitioner', issuer: 'Amazon Web Services', period: 'Aug 2023 – Feb 2029', note: 'Recertified',
     url: 'https://www.linkedin.com/in/dinesh-kumar-n-346583241/overlay/Certifications/52955358/treasury?profileId=ACoAADwQKiYBJz1ERA485HU9aVpV_mMdm4gYKPs' },
 ]
 
@@ -100,6 +100,7 @@ export const achievements = [
 export const publication = {
   title: 'Zero Trust Security for Web Applications in Microservice-Based Environment',
   venue: 'IEEE Xplore',
+  icon: 'IEEE',
   url: 'https://ieeexplore.ieee.org/document/10960955',
 }
 

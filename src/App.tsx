@@ -122,6 +122,7 @@ export default function App() {
               <h3 className="sub">{ui.Award}Certifications</h3>
               {certifications.map((c) => (
                 <a key={c.name} className="card row link" href={c.url} target="_blank" rel="noopener noreferrer">
+                  <span className="item-icon"><TechIcon name={c.icon} /></span>
                   <strong>{c.name}{c.note && <em className="badge">{c.note}</em>}</strong>
                   <span>{c.issuer}</span>
                   <span className="muted">{c.period}</span>
@@ -131,6 +132,7 @@ export default function App() {
               <h3 className="sub">{ui.Trophy}Achievements</h3>
               {achievements.map((a) => (
                 <div key={a.title} className="card row">
+                  <span className="item-icon">{ui.Trophy}</span>
                   <strong>{a.title}</strong>
                   <span className="muted">{a.detail}</span>
                 </div>
@@ -139,6 +141,7 @@ export default function App() {
             <div>
               <h3 className="sub">{ui.BookOpen}Publication</h3>
               <a className="card row link" href={publication.url} target="_blank" rel="noopener noreferrer">
+                <span className="item-icon"><TechIcon name={publication.icon} /></span>
                 <strong>{publication.title}</strong>
                 <span className="muted">{publication.venue}</span>
                 <span className="accent">Read paper →</span>
