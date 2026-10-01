@@ -58,6 +58,7 @@ export const skills = [
   { group: 'MLOps', items: ['MLflow', 'KServe', 'Optuna'] },
   { group: 'Infrastructure as Code', items: ['Terraform', 'Ansible', 'Helm'] },
   { group: 'CI/CD & Automation', items: ['GitHub Actions', 'ArgoCD', 'Bash'] },
+  { group: 'Monitoring & Observability', items: ['Prometheus', 'Grafana', 'Loki'] },
   { group: 'Languages', items: ['Python', 'Golang'] },
   { group: 'OS & Networking', items: ['Linux', 'Istio', 'Nginx'] },
   { group: 'Databases', items: ['Relational databases', 'ORM concepts'] },

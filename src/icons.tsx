@@ -3,9 +3,9 @@ import {
   siKubernetes, siDocker, siRabbitmq, siRedis, siMlflow, siOptuna, siTerraform, siAnsible,
   siHelm, siGithubactions, siArgo, siGnubash, siPython, siGo, siLinux, siIstio, siNginx,
   siPostgresql, siLangchain, siLanggraph, siGooglegemini, siClaude, siGooglecloud, siKnative,
-  siGit, siGithub, siGmail, siIeee,
+  siGit, siGithub, siGmail, siIeee, siPrometheus, siGrafana, siIonos, siOvh,
 } from 'simple-icons'
-import { Cloud, Sparkles, Bot, Rocket, Database, Send as Ship, Workflow, Boxes, Gauge, Cpu } from 'lucide-react'
+import { Cloud, Sparkles, Bot, Rocket, Database, Send as Ship, Workflow, Boxes, Gauge, Cpu, ScrollText } from 'lucide-react'
 
 type Brand = { path: string; hex: string }
 
@@ -20,14 +20,14 @@ const brands: Record<string, Brand> = {
   Nginx: brand(siNginx), GCP: brand(siGooglecloud), Knative: brand(siKnative), Git: brand(siGit),
   LangChain: brand(siLangchain), LangGraph: brand(siLanggraph), Gemini: brand(siGooglegemini),
   'Claude Code': brand(siClaude), 'Relational databases': brand(siPostgresql),
-  GitHub: brand(siGithub), Gmail: brand(siGmail), IEEE: brand(siIeee),
+  IONOS: brand(siIonos), OVH: brand(siOvh), Prometheus: brand(siPrometheus), Grafana: brand(siGrafana), GitHub: brand(siGithub), Gmail: brand(siGmail), IEEE: brand(siIeee),
 }
 
 const fallbacks: Record<string, ReactNode> = {
-  AWS: <Cloud />, KServe: <Boxes />, 'Google ADK': <Bot />, Antigravity: <Rocket />,
+  AWS: <Cloud />, Loki: <ScrollText />, KServe: <Boxes />, 'Google ADK': <Bot />, Antigravity: <Rocket />,
   'European Sovereign Cloud providers': <Cloud />, 'ORM concepts': <Database />,
   'Deployment strategy': <Ship />, 'Cost estimation & optimization': <Gauge />,
-  'Cloud migration': <Workflow />, Optuna: <Sparkles />,
+  'Cloud migration': <Workflow />, 'Cost optimization': <Gauge />, 'Deployment strategist': <Ship />, 'EU sovereign cloud': <Cloud />, Optuna: <Sparkles />,
 }
 
 const luminance = (hex: string) => {
